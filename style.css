@@ -1,0 +1,243 @@
+:root {
+  --accent: #2b6cb0;
+  --muted: #6b7280;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #111827;
+  --radius: 12px;
+  --spacing-base: 1.5rem;
+  --spacing-large: 2.5rem;
+}
+
+.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.side-nav {
+  position: fixed;
+  left: var(--spacing-base);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.nav-link {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+  color: var(--muted);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.container {
+  max-width: 920px;
+  margin: var(--spacing-large) auto;
+  padding: var(--spacing-base);
+}
+
+.card {
+  display: grid;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 24px rgba(15,23,42,0.06);
+  grid-template-columns: 280px 1fr;
+  overflow: hidden;
+}
+
+.sidebar {
+  padding: var(--spacing-large);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(var(--accent-rgb), 0.03);
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    margin-bottom: var(--spacing-base);
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.role {
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: var(--spacing-large);
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: var(--spacing-base);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+}
+
+.contact p, .languages p {
+    margin: 4px 0;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--spacing-base);
+}
+
+.skill {
+    background: var(--accent);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+
+.main {
+  padding: var(--spacing-large);
+}
+
+.about {
+    margin-bottom: var(--spacing-large);
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.details {
+    display: flex;
+    gap: var(--spacing-base);
+    margin-bottom: var(--spacing-large);
+}
+
+.detail-card {
+    flex: 1;
+    padding: 1rem;
+    border: 1px solid var(--muted);
+    border-radius: var(--radius);
+    transition: 0.3s;
+}
+
+.detail-card:hover {
+    box-shadow: 0 4px 10px rgba(var(--accent-rgb), 0.1);
+    transform: translateY(-2px);
+}
+
+.detail-card h4 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.block {
+    min-height: 50vh;
+    padding-top: 1rem;
+    margin-bottom: var(--spacing-large);
+}
+
+.block h3 {
+    font-size: 1.5rem;
+    color: var(--text);
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--muted);
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+}
+
+.job {
+    margin-bottom: var(--spacing-large);
+    border-left: 3px solid var(--accent);
+    padding-left: 15px;
+}
+
+.job h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.meta {
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    padding-top: var(--spacing-base);
+    border-top: 1px solid var(--muted);
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn--primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn--primary:hover {
+    opacity: 0.9;
+}
+
+.btn--secondary {
+    background: none;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn--secondary:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.muted { color: var(--muted); }

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>resume</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <nav class="side-nav">
+    <button class="nav-link" data-target="#about" title="About Me"><i data-lucide="user"></i></button>
+    <button class="nav-link" data-target="#details" title="Details"><i data-lucide="list"></i></button>
+    <button class="nav-link" data-target="#experience" title="Experience"><i data-lucide="briefcase"></i></button>
+    <button class="nav-link" data-target="#projects" title="Projects"><i data-lucide="folder"></i></button>
+    <button class="nav-link" data-target="#contact" title="Contact"><i data-lucide="mail"></i></button>
+  </nav>
+
+  <div class="container">
+    <div class="card" role="main">
+
+      <aside class="sidebar" aria-label="Personal details">
+        <img class="photo" src="your_photo.jpg" alt="Your Name photo">
+        <div class="name">Your Name</div>
+        <div class="role">Job Title · Location</div>
+
+        <div id="contact" class="contact">
+          <div class="section-title">Contact</div>
+          <p>Email: ijasjsjs.com</p>
+          <p>Phone: +1 (555) 123456</p>
+          <p>Website / Portfolio: example.com</p>
+        </div>
+
+        <div class="section-title">Skills</div>
+        <div class="skills">
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Communication</div>
+        </div>
+
+        <div class="section-title">Languages</div>
+        <p class="muted">English (Fluent), Filipino (Native)</p>
+      </aside>
+
+      <section class="main">
+
+        <div id="about" class="about">
+          <h2>About Me</h2>
+          <p>Write your introduction here.</p>
+        </div>
+
+        <div id="details" class="details">
+          <div class="detail-card">
+            <h4>Education</h4>
+            <p>Your education here</p>
+          </div>
+          <div class="detail-card">
+            <h4>Certifications</h4>
+            <p>Your certifications here</p>
+          </div>
+          <div class="detail-card">
+            <h4>Interests</h4>
+            <p>Your interests here</p>
+          </div>
+        </div>
+
+        <div id="experience" class="block">
+          <h3>Experience</h3>
+          <div class="job">
+            <h4>Job Title — Company</h4>
+            <div class="meta">Date · City</div>
+            <p class="muted">Describe your role.</p>
+          </div>
+        </div>
+
+        <div id="projects" class="block">
+          <h3>Projects</h3>
+          <div class="job">
+            <h4>Project Name</h4>
+            <div class="meta">Tech Used</div>
+            <p class="muted">Short description of what you built.</p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--primary" onclick="toggleDarkMode()">Dark Mode</button>
+          <button class="btn btn--secondary" onclick="downloadHtml()">Download</button>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script> lucide.createIcons(); </script>
+</body>
+</html>
